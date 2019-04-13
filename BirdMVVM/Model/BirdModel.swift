@@ -7,11 +7,11 @@ public class BirdModel {
         case rare
         case veryRare
     }
-    
+
     let name: String
     let rarity: Rarity
     let image: UIImage
-    
+
     public init(name: String, rarity: Rarity, image: UIImage) {
         self.name = name
         self.rarity = rarity
