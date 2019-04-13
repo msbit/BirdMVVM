@@ -12,6 +12,8 @@
 		E25F358222617D5E00B0A4BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E25F358022617D5E00B0A4BF /* Main.storyboard */; };
 		E25F358422617D5F00B0A4BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E25F358322617D5F00B0A4BF /* Assets.xcassets */; };
 		E25F358722617D5F00B0A4BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E25F358522617D5F00B0A4BF /* LaunchScreen.storyboard */; };
+		E26009CB2261821800AF54CE /* BirdModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26009CA2261821800AF54CE /* BirdModel.swift */; };
+		E26009CD226182A400AF54CE /* BirdViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26009CC226182A400AF54CE /* BirdViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		E25F358322617D5F00B0A4BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E25F358622617D5F00B0A4BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E25F358822617D5F00B0A4BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E26009CA2261821800AF54CE /* BirdModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirdModel.swift; sourceTree = "<group>"; };
+		E26009CC226182A400AF54CE /* BirdViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirdViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +58,40 @@
 		E25F357B22617D5E00B0A4BF /* BirdMVVM */ = {
 			isa = PBXGroup;
 			children = (
+				E25F358822617D5F00B0A4BF /* Info.plist */,
 				E25F357C22617D5E00B0A4BF /* AppDelegate.swift */,
-				E25F357E22617D5E00B0A4BF /* BirdViewController.swift */,
-				E25F358022617D5E00B0A4BF /* Main.storyboard */,
 				E25F358322617D5F00B0A4BF /* Assets.xcassets */,
 				E25F358522617D5F00B0A4BF /* LaunchScreen.storyboard */,
-				E25F358822617D5F00B0A4BF /* Info.plist */,
+				E25F358022617D5E00B0A4BF /* Main.storyboard */,
+				E26009D02261861200AF54CE /* Model */,
+				E26009D22261864900AF54CE /* ViewController */,
+				E26009D12261863100AF54CE /* ViewModel */,
 			);
 			path = BirdMVVM;
+			sourceTree = "<group>";
+		};
+		E26009D02261861200AF54CE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E26009CA2261821800AF54CE /* BirdModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E26009D12261863100AF54CE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E26009CC226182A400AF54CE /* BirdViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E26009D22261864900AF54CE /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E25F357E22617D5E00B0A4BF /* BirdViewController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +167,8 @@
 			files = (
 				E25F357F22617D5E00B0A4BF /* BirdViewController.swift in Sources */,
 				E25F357D22617D5E00B0A4BF /* AppDelegate.swift in Sources */,
+				E26009CB2261821800AF54CE /* BirdModel.swift in Sources */,
+				E26009CD226182A400AF54CE /* BirdViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
