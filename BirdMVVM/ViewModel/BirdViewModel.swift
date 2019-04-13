@@ -1,21 +1,21 @@
 import UIKit
 
-public class BirdViewModel {
+public class BirdViewModel: NSObject {
     let model: BirdModel
 
     public init(model: BirdModel) {
         self.model = model
     }
 
-    public var name: String {
+    @objc public dynamic var name: String {
         return model.name
     }
 
-    public var image: UIImage {
+    @objc public dynamic var image: UIImage {
         return model.image
     }
 
-    public var purchaseFeeText: String {
+    @objc public dynamic var purchaseFeeText: String {
         switch model.rarity {
         case .common:
             return "$40"
