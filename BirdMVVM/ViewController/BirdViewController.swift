@@ -5,6 +5,10 @@ class BirdViewController: UIViewController {
     @IBOutlet var purchaseFeeLabel: UILabel!
     @IBOutlet var nameLabel: UILabel!
 
+    static var imageViewContext = 0
+    static var purchaseFeeLabelContext = 1
+    static var nameLabelContext = 2
+
     var viewModel: BirdViewModel?
 
     override func viewDidLoad() {
@@ -16,9 +20,9 @@ class BirdViewController: UIViewController {
         viewModel = BirdViewModel(model: swifty)
 
         if let viewModel = viewModel {
-            viewModel.addObserver(self, forKeyPath: "name", options: [.initial, .new], context: nil)
-            viewModel.addObserver(self, forKeyPath: "image", options: [.initial, .new], context: nil)
-            viewModel.addObserver(self, forKeyPath: "purchaseFeeText", options: [.initial, .new], context: nil)
+            viewModel.addObserver(self, forKeyPath: "name", options: [.initial, .new], context: &BirdViewController.nameLabelContext)
+            viewModel.addObserver(self, forKeyPath: "image", options: [.initial, .new], context: &BirdViewController.imageViewContext)
+            viewModel.addObserver(self, forKeyPath: "purchaseFeeText", options: [.initial, .new], context: &BirdViewController.purchaseFeeLabelContext)
         }
     }
 
